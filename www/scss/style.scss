@@ -1,0 +1,30 @@
+/*===============================
+=            modules            =
+===============================*/
+@import "lib/sprite";
+@import "modules/global";
+@import "modules/header";
+@import "modules/contents";
+@import "modules/footer";
+
+/*================================
+=            original            =
+================================*/
+ul.main--list{
+  text-align: center;
+  padding: 0;
+  li{
+    display: inline-block;
+    text-indent: 100%;
+    overflow: hidden;
+    &.main--list--icon1{
+      @include sprite($circle);
+    }
+    &.main--list--icon2{
+      @include sprite($star);
+    }
+    &.main--list--icon3{
+      @include sprite($triangle);
+    }
+  }
+}

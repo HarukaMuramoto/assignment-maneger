@@ -1,0 +1,104 @@
+@-webkit-keyframes bounce {
+  0%   {
+    margin-bottom:-1em;
+    transform:scaleY(.8);
+  }
+  15% {
+    transform:scaleY(1);
+  }
+  100% {
+    margin-bottom:15em;
+    transform:scaleY(1);
+  }
+}
+
+@-webkit-keyframes bounce-shadow {
+  0%   {
+    transform:scaleY(.1) scaleX(.8);
+  }
+  100% {
+    transform:scaleY(.05) scaleX(.25);
+  }
+}
+
+.mofu {
+  position:fixed;
+  bottom:21%;
+  left:60%;
+  margin-left:-5em;
+  z-index:1;
+  -webkit-animation: bounce 400ms alternate infinite ease;
+}
+.shadow {
+  border-radius:100em;
+  width:10em;
+  height:10em;
+  position:fixed;
+  bottom:20%;
+  left:50%;
+  margin-left:-5em;
+  z-index:0;
+  background:rgba(0,0,0,.1);
+  margin-bottom:-5em;
+  -webkit-animation:bounce-shadow 400ms alternate infinite ease;
+}
+
+div.left.navigation-bar__left, div.right.navigation-bar__right {
+  background-color: #FFa000;
+
+}
+ons-button#register-btn.button {
+  border-radius: 50px;
+  background-color:#CDDC39;
+  width: 100px;
+  height: 100px;
+  margin: 30px 0px;
+  padding-top: 25px;
+}
+.ion-edit {
+  margin-top: 10px;
+  font-size: 50px;
+}
+#register-main {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 100px;
+  background-color: #FFC107;
+}
+#register-section{
+  text-align: left;
+  padding-left: 10%;
+
+}
+input.add-form.ng-pristine.ng-untouched.ng-valid {
+  font-size: 20px;
+  width: 215px;
+  height: 30px;
+}
+input.ng-pristine.ng-untouched.ng-valid {
+  font-size: 20px;
+  width: 215px;
+  height: 30px;
+}
+select.ng-pristine.ng-untouched.ng-valid {
+  width: 235px;
+  height: 30px;
+}
+li {
+  padding-top: 10px;
+}
+
+#mofu-section {
+  width: 250px;
+  height: 100px;
+  font-size: 15px;
+  margin: 20px;
+  border: 2px rgb(241, 150, 29) solid;
+  border-radius: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+#mofu-word {
+  padding-top: 10px;
+}

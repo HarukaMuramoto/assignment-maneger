@@ -1,0 +1,36 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="left"><ons-back-button ng-click="myNavigator.popPage('page/page1.html')">Back</ons-back-button></div>
+    <!-- <div class="center">{{title}}</div> -->
+    <div class="center">{{title}}</div>
+
+  </ons-toolbar>
+  <main id="register-main">
+    <section id=register-section>
+    <ul style="list-style: none">
+      <li>
+        やること <br>
+        <input type="text" class="add-form" placeholder="Input task name" ng-model="memo"  />
+      </li>
+      <li>
+        いつまでに？ <br>
+        <input type="date" ng-model="date">
+      </li>
+      <li>
+        やることレベル <br>
+        (1:すごく簡単〜5:すごく難しい）<br>　
+        <select name="level" ng-model="level">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected="">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      </li>
+    </ul>
+
+  </section>
+      <ons-button id="register-btn" modifier="" ng-click="addTask(memo, date, level)"><i class="icon ion-edit"></i></ons-button>
+
+  </main>
+</ons-page>

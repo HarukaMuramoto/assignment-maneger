@@ -1,0 +1,114 @@
+/*===============================
+=            modules            =
+===============================*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*==============================
+=            global            =
+==============================*/
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+/*=====  End of global  ======*/
+/*==============================
+=            header            =
+==============================*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #D14542;
+  display: block;
+  color: #fff; }
+  #header h1 {
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 16px; }
+
+/*=====  End of header  ======*/
+/*================================
+=            contents            =
+================================*/
+#main {
+  display: block;
+  padding: 40px 10px 20px; }
+
+/*=====  End of contents  ======*/
+/*==============================
+=            footer            =
+==============================*/
+#footer {
+  text-align: center; }
+
+/*=====  End of footer  ======*/
+/*================================
+=            original            =
+================================*/
+ul.main--list {
+  text-align: center;
+  padding: 0; }
+  ul.main--list li {
+    display: inline-block;
+    text-indent: 100%;
+    overflow: hidden; }
+    ul.main--list li.main--list--icon1 {
+      background-image: url(../img/sprite.png);
+      background-position: 0px 0px;
+      width: 100px;
+      height: 100px; }
+    ul.main--list li.main--list--icon2 {
+      background-image: url(../img/sprite.png);
+      background-position: -102px 0px;
+      width: 100px;
+      height: 100px; }
+    ul.main--list li.main--list--icon3 {
+      background-image: url(../img/sprite.png);
+      background-position: -204px 0px;
+      width: 100px;
+      height: 100px; }

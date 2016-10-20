@@ -1,0 +1,41 @@
+<ons-page>
+  <ons-toolbar>
+    <!-- <div class="center">{{title}}</div> -->
+    <div class="center">{{title}}</div>
+
+  </ons-toolbar>
+  <main>
+    <header class="page1-header">
+      <span id="mofu-span"><img id="mofu" src="img/Slicesmall.png" alt="" width="90" height="60"></span>
+      <div class="arrow_msg"><p>{{nameData.length}}件の”やること”があります</p></div>
+    </header>
+    <table cellspacing="0" cellpadding="5">
+    <tr>
+      <!-- <ons-list-header><a href="http://yahoo.co.jp">link</a></ons-list-header> -->
+      <!-- <ons-list-header>repo-maneger</ons-list-header> -->
+      <th width="15%">完了</th>
+      <th width="45%">やること</th>
+      <th width="25%">締切り</th>
+      <th width="15%">削除</th>
+    </tr>
+    <tr ng-class="(data.level == 1) ? 'level1' : ((data.level == 2) ? 'level2' :((data.level == 3) ? 'level3' : ((data.level == 4) ? 'level4' : ((data.level == 5) ? 'level5' : ''))))" ng-repeat="data in nameData track by $index">
+      <td><button id="done-btn" ng-click="doneTask(data)"><i class="ion-checkmark-round"></data></td>
+      <td>{{data.message}}</td>
+      <td>{{data.date}}</td>
+      <td><button id="delete-btn" ng-click="deleteTask(data)"><i class="icon ion-close-round"></button></td>
+    </tr>
+  </table>
+
+  <ons-button id="add-btn" modifier="" ng-click="myNavigator.pushPage('page/register.html')"><i class="icon ion-plus-round"></i></ons-button>
+
+
+
+  </main>
+</ons-page>
+
+<!-- "(data.level == 1) ? 'level1' : (
+              (data.level == 2) ? 'level2' : (
+              (data.level == 3) ? 'level3' : (
+              (data.level == 4) ? 'level4' : (
+              (data.level == 5) ? 'level5' : (
+              ))))): ''" -->
